@@ -1,0 +1,27 @@
+# Session Data files
+.RData
+.RDataTmp
+# History files
+.Rhistory
+.Rapp.history
+# RStudio files
+.Rproj.user/
+*.Rproj
+# DS Store files
+.DS_STORE
+data/.DS_STORE
+# outputs
+results/*.xlsx
+results/*.geojson
+results/*.html
+results/*.pdf
+results/*RData
+figures/*.pdf
+figures/figure_inputs/*
+figures/figure_inputs/municipalities/*
+figures/figure_inputs/states/*
+figures/figure_output/*
+input/*
+qgis/*
+intermediate_files/*
+
