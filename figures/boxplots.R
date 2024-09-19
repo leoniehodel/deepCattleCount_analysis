@@ -41,6 +41,10 @@ sr<-sr+scale_colour_manual(values=cols)
 sr
 ggsave('figures/box_sr.png', height = h_b, width = w_b, units = 'px')
 
+
+
+
+
 ##############################################################################
 # Land use for Supplementary plot 1
 ##############################################################################

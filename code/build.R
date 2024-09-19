@@ -46,6 +46,7 @@ source('figures/zoom_on_car.R')
 source("figures/boxplots.R")
 source("figures/coef_plot.R")
 source("figures/boxplots.R")
+source("figures/ppm_comparison.R")
 
 
 cat(" R scripts have been executed.\n")
