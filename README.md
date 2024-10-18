@@ -14,7 +14,7 @@ This repository contains the R code for performing regression analysis on cattle
 Open R or RStudio in the project directory and install packages (depenendcies only for the regression analysis):
 
 ``` R
-install.packages(c("tidyverse", "car", "texreg", "vtable"))
+install.packages(c("tidyverse", "texreg", "vtable"))
 ``` 
 
 ## Regression results
