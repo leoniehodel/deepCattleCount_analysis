@@ -49,7 +49,7 @@ dsdrop2<-dsdrop2 %>%  dplyr::select(SIGLA_UF,pasture_201819_tot,stocking_rate,
 
 st(dsdrop, file='results/summarystats_dsdrop.csv')
 st(dsdrop2, file= 'results/summarystats_dsdrop2.csv')
-saveRDS(dsdrop2,"results/dsdrop2_notstandardized.RData")
+#saveRDS(dsdrop2,"results/dsdrop2_notstandardized.RData")
 
 
 standardize_dataset <- function(dataset, variables) {
