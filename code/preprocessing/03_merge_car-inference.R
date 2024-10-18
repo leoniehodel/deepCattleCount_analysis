@@ -18,9 +18,8 @@ excel_base_date <- as.Date("1900-01-01")
 dates <- excel_base_date + outlines$image_date
 outlines$image_date <- dates
 
-#dfcattle <- read.xlsx('input/S3_cattle_maps.xlsx')
 #this is provided on github
-all_inf_cattle <- st_read('S3_cattle_maps.geojson')
+all_inf_cattle <- st_read('data/S3_cattle_maps.geojson')
 #all_inf_cattle <- st_as_sf(dfcattle, wkt = "geometry_wkt", crs = 4674)
 #dates <- excel_base_date + all_inf_cattle$img_date
 all_inf_cattle$img_date <- as.Date(all_inf_cattle$img_date, format = "%Y-%m-%d %H:%M:%S %Z")

@@ -129,11 +129,11 @@ for(inf in inference_list){
 }
 
 sum(all_inf_cattle_19$n_cattle)
-st_write(all_inf_cattle_19,'input/S3_cattle_maps.geojson', append=FALSE)
+st_write(all_inf_cattle_19,'data/S3_cattle_maps.geojson', append=FALSE)
 
 
 all_inf_cattle_19$geometry_wkt <- st_as_text(all_inf_cattle_19$geometry)
 all_inf_cattle_19_excel<- all_inf_cattle_19 %>% as.data.frame() %>% dplyr::select(-geometry)
 
-write.xlsx(all_inf_cattle_19_excel, 'input/S3_cattle_maps.xlsx')
+write.xlsx(all_inf_cattle_19_excel, 'data/S3_cattle_maps.xlsx')
 
