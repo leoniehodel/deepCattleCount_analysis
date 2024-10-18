@@ -10,16 +10,16 @@ library(vtable)
 ################################
 
 # image outlines
-image_outlines<- st_read('input/image_outlines/image_outlines24.geojson')
-catte <- st_read('input/S3_cattle_maps.geojson')
+image_outlines<- st_read('data/image_outlines/image_outlines24.geojson')
+catte <- st_read('data/S3_cattle_maps.geojson')
 source("code/src/rcode_EPL_clean_data.R")
 ##############################################################################
 #  Supplementary plot 1: comparison with PPA
 ##############################################################################
 
 # pasture area/img outline
-lu_2019 <- terra::rast('input/Mapbiomas/mapbiomas-brazil-collection-70-amazonia-2019.tif')
-MPB_meta <-read_csv('input/Mapbiomas/mapbiomas-brazil-collection-70-amazonia-area.csv')
+lu_2019 <- terra::rast('data/Mapbiomas/mapbiomas-brazil-collection-70-amazonia-2019.tif')
+MPB_meta <-read_csv('data/Mapbiomas/mapbiomas-brazil-collection-70-amazonia-area.csv')
 
 
 ## prep MPB meta
@@ -84,7 +84,7 @@ ggplot(Pasture_mun, aes(x=vhr_stocking_rate, y=ppm_stocking_rate, size = vhr_per
            hjust = 1.1, vjust = 1.5, size = 4, color = "black", fontface = "italic")
 
   
-ggsave('figures/figure_output/ppm_comparison.png')
+ggsave('figures/ppm_comparison.png')
 
 Pasture_mun$difference_sr_ppm_vhr <- round(Pasture_mun$ppm_stocking_rate - Pasture_mun$vhr_stocking_rate,2)
 

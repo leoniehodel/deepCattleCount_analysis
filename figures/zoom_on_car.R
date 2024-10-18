@@ -10,7 +10,7 @@ cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2",
 car2<-'AC-1200054-CC52E27E6FF646FD865EBF6D22B83A8A'
 car_shape2 <- st_read('intermediate_files/all_car_contained_cattle.geojson') %>% filter(cod_imovel == car2)
 bbox2 <-st_bbox(car_shape2)
-ac <- terra::rast('~/Brazil_data/Mapbiomas_v8_amazon/mapbiomas-brazil-collection-80-amaznia-2018_2019-0000031744-0000000000.tif')
+ac <- terra::rast('data/Mapbiomas_v8_amazon/mapbiomas-brazil-collection-80-amaznia-2018_2019-0000031744-0000000000.tif')
 
 # crop raster AC 
 r2 <- crop(ac, extent(car_shape2))

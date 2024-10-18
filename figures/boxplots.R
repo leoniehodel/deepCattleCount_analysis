@@ -11,7 +11,7 @@ cbPalette <- c("#999999", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2",
 cols <- c("AC" = cbPalette[2], "RO" = cbPalette[3],"AM" = cbPalette[4],"PA" = cbPalette[6] )
 
 
-ds <- read_csv('intermediate_files/regression_vars.csv') %>% as.data.frame() 
+ds <- read_csv('data/regression_vars.csv') %>% as.data.frame() 
 ds<- ds %>% filter(imagedate > '2018-01-01' )
 # width and height for boxplots
 w_b<-811*1.2

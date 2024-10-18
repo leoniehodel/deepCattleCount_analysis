@@ -116,7 +116,7 @@ b<-ggplot(coeff_model2, aes(x = Value, y = Variable, color = Model)) +
                      values = c(cbbPalette[4],cbbPalette[5],cbbPalette[6])) 
 b
 ggarrange(a,b)
-ggsave('results/coefficients.png',units ="cm",width = 16,height=5)
+ggsave('results/Figure2_coefficients.png',units ="cm",width = 16,height=5)
 
 
 # the calculation like in Figueras, 1999 results in the same CI
