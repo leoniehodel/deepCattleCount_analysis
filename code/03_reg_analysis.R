@@ -62,7 +62,7 @@ st(dsdrop, file='results/summarystats_dsdrop.csv')
 st(dsdrop2, file= 'results/summarystats_dsdrop2.csv')
 
 # this is used for the interaction plot (Figure S3 )
-saveRDS(dsdrop2,"results/dsdrop2_notstandardized.RData")
+saveRDS(dsdrop2,"data/dsdrop2_notstandardized.RData")
 
 
 standardize_dataset <- function(dataset, variables) {
@@ -154,7 +154,7 @@ htmlreg(file = "results/reg_model.html",
 
 
 # save the regression models to generate figures
-saveRDS(models, file="results/regression_models.RData")
-saveRDS(dsdrop2,"results/dsdrop2.RData")
+saveRDS(models, file="data/regression_models.RData")
+saveRDS(dsdrop2,"data/dsdrop2.RData")
 
 
