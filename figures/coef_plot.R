@@ -2,10 +2,10 @@ library(ggplot2)
 library(ggpubr)
 library(broom)
 
-cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+cbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
 cols <- c("AC" = cbPalette[2], "RO" = cbPalette[3],"AM" = cbPalette[4],"PA" = cbPalette[6] )
 
-ds <- read_csv('intermediate_files/regression_vars.csv') %>% as.data.frame() 
+ds <- read_csv('data/regression_vars.csv') %>% as.data.frame() 
 
 # read in the models
 models<- readRDS("results/regression_models.RData")
@@ -54,7 +54,7 @@ a<-ggplot(coeff_model1, aes(x = Value, y = Variable, color = Model)) +
         axis.text.x = element_text(size = 6),
         legend.position="bottom",legend.text=element_text(size=6)) +
   scale_y_discrete(labels = c("defo" = expression(bold("Deforestation"["[t-2,t-6]"])),
-                              "defo_buffer"=expression("Deforestation(buffer) "["[t-2,t-6]"]),
+                              "defo_buffer"=expression(bold("Deforestation(buffer) "["[t-2,t-6]"])),
                               "deg"=expression("Degradation(moderate) "["[t0]"]), 
                               "degsev"=expression("Degradation(severe) "["[t0]"]),
                               "crop"=expression("Crop area "["[t0]"])))+
@@ -116,7 +116,7 @@ b<-ggplot(coeff_model2, aes(x = Value, y = Variable, color = Model)) +
                      values = c(cbbPalette[4],cbbPalette[5],cbbPalette[6])) 
 b
 ggarrange(a,b)
-ggsave('figures/figure_output/coefficients.png',units ="cm",width = 16,height=5)
+ggsave('results/coefficients.png',units ="cm",width = 16,height=5)
 
 
 # the calculation like in Figueras, 1999 results in the same CI

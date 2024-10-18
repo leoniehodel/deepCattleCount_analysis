@@ -1,12 +1,23 @@
+install_if_missing <- function(package) {
+  if (!require(package, character.only = TRUE)) {
+    install.packages(package)
+    library(package, character.only = TRUE)
+  }
+}
+
+# List of packages to install
+packages <- c("tidyverse", "texreg", "vtable")
+
+# Install and load each package
+lapply(packages, install_if_missing)
 library(tidyverse)
-library(car)
 library(texreg)
 library(vtable)
-
 ################################
 #'## Read in data
 ################################
 dsdrop<- read.csv('data/regression_vars.csv')
+
 dsdrop$SIGLA_UF <- factor(dsdrop$SIGLA_UF, levels = c("PA","RO", "AC" ,'AM'))
 
 # creat results folder
@@ -141,7 +152,7 @@ htmlreg(file = "results/reg_model.html",
 
 
 # save the regression models
-#saveRDS(models, file="results/regression_models.RData")
+saveRDS(models, file="results/regression_models.RData")
 #saveRDS(dsdrop2,"results/dsdrop2.RData")
 
 
