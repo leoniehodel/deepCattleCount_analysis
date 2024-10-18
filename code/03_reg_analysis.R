@@ -6,7 +6,7 @@ library(vtable)
 ################################
 #'## Read in data
 ################################
-dsdrop<- read.csv('regression_vars.csv')
+dsdrop<- read.csv('data/regression_vars.csv')
 dsdrop$SIGLA_UF <- factor(dsdrop$SIGLA_UF, levels = c("PA","RO", "AC" ,'AM'))
 
 # creat results folder
