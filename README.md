@@ -1,7 +1,7 @@
 # Tackling deforestation with deep-learning-based cattle counts on satellite images
 
 
-This repository contains the R code for performing regression analysis on cattle stocking rates  (number of cattle/ hectare) in the Amazon as described in Hodel et al. (in review). We also provide the ([cattle density maps](./data/S3_cattle_maps.geojson)) from the deep learning model and the [regression variables] (./data/regression_vars.csv)). 
+This repository contains the R code for performing regression analysis on cattle stocking rates  (number of cattle/ hectare) in the Amazon as described in Hodel et al. (in review). We also provide the [cattle density maps](./data/S3_cattle_maps.geojson) from the deep learning model and the [regression variables](./data/regression_vars.csv). 
 
 ![](./imgs/img1.png)
 
