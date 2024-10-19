@@ -43,5 +43,5 @@ Please note that this step requires downloading several secondary datasets (e.g,
 # Deep learning model 
 For insights into the deep learning part of this research visit: 
 
-[leoniehodel/deepCattleCount](https://github.com/leoniehodel/deepCattleCounts)
+[leoniehodel/deepCattleCounts](https://github.com/leoniehodel/deepCattleCount)
 
